@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 body {
 	font-family: Microsoft JhengHei;
@@ -9,7 +9,7 @@ a:hover {
 }
 
 .login_body_bg {
-	background:url(../images/Lottery/bg.jpg)top center no-repeat;
+	background:url(../images/lottery/bg.jpg)top center no-repeat;
 }
 .login_logo {
     margin-top: 50px;
@@ -62,10 +62,10 @@ v_algin_top {
 	float:right;
 }
 .d_head_bg {
-	background:url(../images/Lottery/dhead_bg.jpg)top left repeat-x !important;
+	background:url(../images/lottery/dhead_bg.jpg)top left repeat-x !important;
 }
 .btn_blue {
-	background:url(../images/Lottery/btn_bg.jpg)top left repeat-x !important;
+	background:url(../images/lottery/btn_bg.jpg)top left repeat-x !important;
 }
 .noborder {
 	border:none;
@@ -165,7 +165,7 @@ v_algin_top {
     border-top: 1px solid #eae7e7;
 }
 .header {
-	background:url(../images/Lottery/head_bg.jpg)top left no-repeat;
+	background:url(../images/lottery/head_bg.jpg)top left no-repeat;
 	height:103px;
 }
 .head {
@@ -206,7 +206,7 @@ v_algin_top {
 .menu {
     width: 1001px;
     height: 34px;
-    background: url(../images/Lottery/menu_bg.png)top left no-repeat;
+    background: url(../images/lottery/menu_bg.png)top left no-repeat;
     margin-top: 3px;
     margin-left: 8px;
 }
