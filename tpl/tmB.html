@@ -1,0 +1,1120 @@
+﻿<script>
+
+        $(document).ready(function (e) {
+     //login_verification();
+	$('li').removeClass('menu_select');
+	$('#' + $.cookie('view')).addClass("menu_select");
+
+  	$('.fast_table2').css('display','none');
+
+	$('.ball_table tr').click(function() {
+    	if($(this).hasClass("ball_select")) {
+    	    $(this).removeClass("ball_select");
+    	    $(this).find('input').val('');
+    	} else {
+        	$(this).addClass("ball_select");
+    	}
+	});
+	$(".add_all_number_ball").click(function(){
+			$(".number_ball tr").addClass('ball_select');
+	});
+	$(".remove_ball").click(function(){
+	    $(".ball_table tr").removeClass('ball_select');
+	    $(".ball_table tr").find('input').val('');
+	});
+		$("#cansoul").click(function(){
+	    $(".ball_table tr").removeClass('ball_select');
+	    $(".ball_table tr").find('input').val('');
+	});
+	$(".fast_table_btn1").click(function(){
+			$(".fast_table1").css('display','block');
+			$(".fast_table2").css('display','none');
+			$(".fast_table_btn1").addClass('active');
+			$(".fast_table_btn2").removeClass('active');
+	});
+	$(".fast_table_btn2").click(function(){
+			$(".fast_table2").css('display','block');
+			$(".fast_table1").css('display','none');
+			$(".fast_table_btn2").addClass('active');
+			$(".fast_table_btn1").removeClass('active');
+	});
+	
+	
+
+	$('.fast_btn').click(function(){	
+	
+	var select_name = $(this).text();	
+	
+	if(!isNaN(select_name)){
+	$('.ball_table tr').each(function(){	
+	if($(this).find('input').attr('id') == select_name)
+	$(this).addClass('ball_select');
+	})
+	}else{
+		//select_name = $(this).attr('id');
+		var table = $('.ball_table tr');		
+		table.each(function(){	
+		
+		//if((get_select_id($(this))) != false){
+		switch (select_name)
+		{
+			case "单码":				
+			if((get_select_id($(this)) % 2) != 0)
+			{
+			$(this).addClass('ball_select');
+			}		
+			break;
+			case "双码":			
+		
+			if((get_select_id($(this)) % 2) == 0 && get_select_id($(this)) != false)
+			{
+			$(this).addClass('ball_select');
+			}
+			
+			break;
+			case "大码":
+				
+			if((get_select_id($(this))) >= 25 && (get_select_id($(this))) <= 48)
+			{
+			$(this).addClass('ball_select');
+			}
+		
+			break;
+			case "小码":
+			if((get_select_id($(this))) >= 1 && (get_select_id($(this))) <= 24)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "0头":
+			if((get_select_id($(this))) < 10 && (get_select_id($(this))) <= 24)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "1头":
+			if((get_select_id($(this))) >= 10 && (get_select_id($(this))) <= 19)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "2头":
+			if((get_select_id($(this))) >= 20 && (get_select_id($(this))) <= 29)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "3头":
+			if((get_select_id($(this))) >= 30 && (get_select_id($(this))) <= 39)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "4头":
+			if((get_select_id($(this))) >= 40 && (get_select_id($(this))) <= 49)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "鼠":
+			var obj = ['8','20','32','44'];
+			if(obj.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;			
+			case "牛":
+			var obj = ['7','19','31','43'];
+			if(obj.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "虎":
+			var obj = ['6','18','30','42'];
+			if(obj.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "兔":
+			var obj = ['5','17','29','41'];
+			if(obj.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "红":
+			var obj_red = ['1','2','7','8','12','13','18','19','23','24',
+							'29','30','34','35','40','45','46'];
+			if(obj_red.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "红单":
+			var obj_red = ['1','2','7','8','12','13','18','19','23','24',
+							'29','30','34','35','40','45','46'];
+			if(obj_red.indexOf(get_select_id($(this)).toString()) != -1 && (get_select_id($(this)) % 2) != 0)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "红双":
+			var obj_red = ['1','2','7','8','12','13','18','19','23','24',
+							'29','30','34','35','40','45','46'];
+			if(obj_red.indexOf(get_select_id($(this)).toString()) != -1 && (get_select_id($(this)) % 2) == 0)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "红大":
+			var obj_red = ['1','2','7','8','12','13','18','19','23','24',
+							'29','30','34','35','40','45','46'];
+			if(obj_red.indexOf(get_select_id($(this)).toString()) != -1 && (get_select_id($(this))) >= 25 && (get_select_id($(this))) <= 48)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "红小":
+			var obj_red = ['1','2','7','8','12','13','18','19','23','24',
+							'29','30','34','35','40','45','46'];
+			if(obj_red.indexOf(get_select_id($(this)).toString()) != -1 && (get_select_id($(this))) >= 1 && (get_select_id($(this))) <= 24)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			
+			//二列
+			
+			case "小单":
+			if((get_select_id($(this))) >= 1 && (get_select_id($(this))) <= 24 && (get_select_id($(this)) % 2) != 0)
+			{
+			$(this).addClass('ball_select');
+			}	
+			break;
+			case "小双":
+			if((get_select_id($(this))) >= 1 && (get_select_id($(this))) <= 24 && (get_select_id($(this)) % 2) == 0)
+			{
+			$(this).addClass('ball_select');
+			}	
+			break;
+			case "大单":
+			if((get_select_id($(this))) >= 25 && (get_select_id($(this))) <= 48 && (get_select_id($(this)) % 2) != 0)
+			{
+			$(this).addClass('ball_select');
+			}	
+			break;
+			case "大双":
+			if((get_select_id($(this))) >= 25 && (get_select_id($(this))) <= 48 && (get_select_id($(this)) % 2) == 0)
+			{
+			$(this).addClass('ball_select');
+			}	
+			break;
+			case "0尾":
+			if((get_select_id($(this))) % 10 == 0 && get_select_id($(this)) != false)
+			{
+			$(this).addClass('ball_select');
+			}	
+			break;
+			case "1尾":
+			var obj_tail = ['1','11','21','31','41'];
+			if(obj_tail.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "2尾":
+			var obj_tail = ['2','12','22','32','42'];
+			if(obj_tail.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "3尾":
+			var obj_tail = ['3','13','23','33','43'];
+			if(obj_tail.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "4尾":
+			var obj_tail = ['4','14','24','34','44'];
+			if(obj_tail.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "龙":
+			var obj = ['4','16','28','40'];
+			if(obj.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "蛇":
+			var obj = ['3','15','27','39'];
+			if(obj.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "马":
+			var obj = ['2','14','26','38'];
+			if(obj.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "羊":
+			var obj = ['1','13','25','37','49'];
+			if(obj.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "蓝":
+			var obj_blue = [3 ,4 ,9 ,10 ,14 ,15 ,20 ,25 ,26 ,31 ,36 ,37 ,41 ,42 ,47 ,48];
+			if(obj_blue.indexOf(get_select_id($(this))) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "蓝单":
+			var obj_blue = [3 ,4 ,9 ,10 ,14 ,15 ,20 ,25 ,26 ,31 ,36 ,37 ,41 ,42 ,47 ,48];
+			if(obj_blue.indexOf(get_select_id($(this))) != -1 && (get_select_id($(this)) % 2) != 0)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "蓝双":
+			var obj_blue = [3 ,4 ,9 ,10 ,14 ,15 ,20 ,25 ,26 ,31 ,36 ,37 ,41 ,42 ,47 ,48];
+			if(obj_blue.indexOf(get_select_id($(this))) != -1 && (get_select_id($(this)) % 2) == 0)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "蓝大":
+			var obj_blue = [3 ,4 ,9 ,10 ,14 ,15 ,20 ,25 ,26 ,31 ,36 ,37 ,41 ,42 ,47 ,48];
+			if(obj_blue.indexOf(get_select_id($(this))) != -1 && (get_select_id($(this))) >= 25 && (get_select_id($(this))) <= 48)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "蓝小":
+			var obj_blue = [3 ,4 ,9 ,10 ,14 ,15 ,20 ,25 ,26 ,31 ,36 ,37 ,41 ,42 ,47 ,48];
+			if(obj_blue.indexOf(get_select_id($(this))) != -1 && (get_select_id($(this))) >= 1 && (get_select_id($(this))) <= 24)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			
+			//三列
+			
+			case "合单":
+			if($(this).find('input').attr('id') == "特合单")
+			$(this).addClass('ball_select');
+			break;
+			case "合双":
+			if($(this).find('input').attr('id') == "特合双")
+			$(this).addClass('ball_select');
+			break;
+			case "合大":
+			if($(this).find('input').attr('id') == "特合大")
+			$(this).addClass('ball_select');
+			break;
+			case "合小":
+			if($(this).find('input').attr('id') == "特合小")
+			$(this).addClass('ball_select');
+			break;
+			case "5尾":
+			var obj_tail = ['5','15','25','35','45'];
+			if(obj_tail.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "6尾":
+			var obj_tail = [6,16,26,36,46];
+			if(obj_tail.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "7尾":
+			var obj_tail = [7,17,27,37,47];
+			if(obj_tail.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "8尾":
+			var obj_tail = [08,18,28,38,48];
+			if(obj_tail.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "9尾":
+			var obj_tail = [09,19,29,39,49];
+			if(obj_tail.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "猴":
+			var obj = [12,24,36,48];
+			if(obj.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "鸡":
+			var obj = [11,23,35,47];
+			if(obj.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "羊":
+			var obj = [01,13,25,37,49];
+			if(obj.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "猪":
+			var obj = [09,21,33,45];
+			if(obj.indexOf(get_select_id($(this)).toString()) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "绿":
+			var obj_green = [05 ,06 ,11 ,16 ,17 ,21 ,22 ,27 ,28 ,32 ,33 ,38 ,39 ,43 ,44 ,49];
+			if(obj_green.indexOf(get_select_id($(this))) != -1)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "绿单":
+			var obj_green = [05 ,06 ,11 ,16 ,17 ,21 ,22 ,27 ,28 ,32 ,33 ,38 ,39 ,43 ,44 ,49];
+			if(obj_green.indexOf(get_select_id($(this))) != -1 && (get_select_id($(this)) % 2) != 0)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "绿双":
+			var obj_green = [05 ,06 ,11 ,16 ,17 ,21 ,22 ,27 ,28 ,32 ,33 ,38 ,39 ,43 ,44 ,49];
+			if(obj_green.indexOf(get_select_id($(this))) != -1 && (get_select_id($(this)) % 2) == 0)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "绿大":
+			var obj_green = [05 ,06 ,11 ,16 ,17 ,21 ,22 ,27 ,28 ,32 ,33 ,38 ,39 ,43 ,44 ,49];
+			if(obj_green.indexOf(get_select_id($(this))) != -1 && (get_select_id($(this))) >= 25 && (get_select_id($(this))) <= 48)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;
+			case "绿小":
+			var obj_green = [05 ,06 ,11 ,16 ,17 ,21 ,22 ,27 ,28 ,32 ,33 ,38 ,39 ,43 ,44 ,49];
+			if(obj_green.indexOf(get_select_id($(this))) != -1 && (get_select_id($(this))) >= 1 && (get_select_id($(this))) <= 24)
+			{
+			$(this).addClass('ball_select');
+			}
+			break;		
+			
+			
+		}
+
+			})
+	}
+	
+	
+	})
+			
+        });
+		function get_select_id(object)
+		{		
+		if(!isNaN(object.find('input').attr('id')))
+		return parseInt(object.find('input').attr('id'));
+		else
+		return false;
+		}
+		</script>
+
+            <div class="content_center float_left">
+                <div class="plate_head font_white font_size13 font_bold">
+                    <div class="game_title float_left">
+                        香港六合彩 - 特码
+                    </div>
+                    <div class="game_today float_left">
+                        今日输赢：
+                        <span class="white_border font_red">
+                            0
+                        </span>
+                    </div>
+                    <div class="margin_right20 float_right">
+                        10 秒
+                    </div>
+                    <div class="margin_right20 float_right">
+                        距离开奖:
+                        <span class="white_border font_green">
+                            00:00
+                        </span>
+                    </div>
+                    <div class="margin_right10 float_right">
+                        距离封盘:
+                        <span class="white_border font_red">
+                            00:00
+                        </span>
+                    </div>
+                    <div class="margin_right10 float_right">
+                        2017020 期
+                    </div>
+                </div>
+                <div class="content_row">
+                    <button type="button" class="btn btn-default" onclick="ajax('tmA')">特选A</button>
+                    <button type="button" class="btn btn-info" onclick="ajax('tmB')">特选B</button>
+                </div>
+                <div class="content_row">
+                    <div class="float_left ball_div width20">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/01.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="1" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/02.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="2" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/03.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="3" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/04.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="4" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/05.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="5" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/06.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="6" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/07.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="7" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/08.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="8" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/09.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="9" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/10.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="10" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="float_left ball_div width20">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/11.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="11" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/12.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="12" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/13.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="13" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/14.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="14" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/15.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="15" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/16.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="16" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/17.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="17" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/18.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="18" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/19.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="19" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/20.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="20" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="float_left ball_div width20">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/21.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="21" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/22.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="22" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/23.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="23" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/24.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="24" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/25.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="25" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/26.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="26" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/27.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="27" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/28.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="28" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/29.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="29" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/30.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="30" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="float_left ball_div width20">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/31.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="31" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/32.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="32" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/33.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="33" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/34.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="34" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/35.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="35" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/36.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="36" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/37.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="37" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/38.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="38" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/39.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="39" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/40.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="40" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="float_left ball_div width20">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/41.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="41" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/42.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="42" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/43.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="43" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/44.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="44" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/45.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="45" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/46.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="46" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/47.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="47" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/48.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="48" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball"><img src="../images/Lottery/ball/49.png" /></td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="49" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball">&nbsp;</td>
+                                <td class="ball_odds font_red text-center">&nbsp;</td>
+                                <td class="ball_form">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="float_left ball_div width20">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed">
+                            <tr>
+                                <td class="ball2">特大</td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="特大" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball2">特小</td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="特小" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball2">特小单</td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="特小单" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="float_left ball_div width20">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed">
+                            <tr>
+                                <td class="ball2">特合大</td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="特合大" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball2">特合小</td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="特合小" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball2">特小双</td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="特小双" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="float_left ball_div width20">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed">
+                            <tr>
+                                <td class="ball2">特单</td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="特单" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball2">特双</td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="特双" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball2">特大单</td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="特大单" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="float_left ball_div width20">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed">
+                            <tr>
+                                <td class="ball2">特合单</td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="特合单" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball2">特合双</td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="特合双" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball2">特大双</td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="特大双" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="float_left ball_div width20">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed">
+                            <tr>
+                                <td class="ball2">特尾大</td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="特尾大" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball2">特尾小</td>
+                                <td class="ball_odds font_red text-center">--</td>
+                                <td class="ball_form"><input id="特尾小" type="text" class="ball_input form-control" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td class="ball2">&nbsp;</td>
+                                <td class="ball_odds font_red text-center">&nbsp;</td>
+                                <td class="ball_form">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="content_row text-center font_blue2 font_bold">
+                    金额 <input type="text" class="ball_input form-control inlineblock" id="money" name="money" />&nbsp;&nbsp;
+                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#submit_dg" onclick="batch_order()">&nbsp;&nbsp;确定&nbsp;&nbsp;</button>&nbsp;
+                    <button type="button" class="btn btn-primary btn-xs remove_ball">&nbsp;&nbsp;重置&nbsp;&nbsp;</button>
+                </div>
+            </div>
+            <div class="content_right float_left">
+                <div class="content_row">
+                    <div class="float_left width50 paddingR2">
+                        <button type="button" class="btn btn-info btn-block btn-xs active fast_table_btn1">快投1</button>
+                    </div>
+                    <div class="float_left width50 paddingL2">
+                        <button type="button" class="btn btn-info btn-block btn-xs fast_table_btn2">快投2</button>
+                    </div>
+                </div><br />
+                <div class="content_row fast_table1">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-bordered">
+                        <thead>
+                            <tr>
+                                <td colspan="3" class="fast_title text-center">快捷投注 1</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">1</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">18</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">35</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">2</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">19</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">36</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">3</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">20</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">37</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">4</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">21</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">38</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">5</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">22</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">39</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">6</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">23</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">40</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">7</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">24</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">41</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">8</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">25</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">42</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">9</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">26</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">43</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">10</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">27</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">44</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">11</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">28</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">45</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">12</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">29</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">46</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">13</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">30</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">47</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">14</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">31</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">48</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">15</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">32</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">49</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">16</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">33</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">&nbsp;</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">17</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">34</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">&nbsp;</button></td>
+                            </tr>
+                            <tr>
+                                <td width="66%" colspan="2"><button type="button" class="fast_btn add_all_number_ball">全选</button></td>
+                                <td width="33%"><button type="button" class="fast_btn remove_ball">反选</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="content_row fast_table2">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-bordered">
+                        <thead>
+                            <tr>
+                                <td colspan="3" class="fast_title text-center">快捷投注 2</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td width="33%"><button id="A" type="button" class="fast_btn">单码</button></td>
+                                <td width="33%"><button id="B" type="button" class="fast_btn">小单</button></td>
+                                <td width="33%"><button id="C" type="button" class="fast_btn">合单</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn">双码</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">小双</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">合双</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn">大码</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">大单</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">合大</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn">小码</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">大双</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">合小</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn">0头</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">0尾</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">5尾</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn">1头</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">1尾</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">6尾</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn">2头</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">2尾</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">7尾</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn">3头</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">3尾</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">8尾</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn">4头</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">4尾</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">9尾</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn">鼠</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">龙</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">猴</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn">牛</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">蛇</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">鸡</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn">虎</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">马</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">羊</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn">兔</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">羊</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">猪</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">红</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">蓝</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">绿</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">红单</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">蓝单</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">绿单</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">红双</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">蓝双</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">绿双</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">红大</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">蓝大</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">绿大</button></td>
+                            </tr>
+                            <tr>
+                                <td width="33%"><button type="button" class="fast_btn fast_red">红小</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_blue">蓝小</button></td>
+                                <td width="33%"><button type="button" class="fast_btn fast_green">绿小</button></td>
+                            </tr>
+                            <tr>
+                                <td width="66%" colspan="2"><button type="button" class="fast_btn">家禽</button></td>
+                                <td width="33%"><button type="button" class="fast_btn">野兽</button></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><button type="button" id="cansoul" class="fast_btn">取消</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--燈箱-->
+            <div class="modal fade" id="submit_dg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="lightbox_head text-center">
+                            下注明细(请确认注单)
+                        </div>
+                        <div class="lightbox_body">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered table-hover table-striped table-condensed margin0">
+                                <thead>
+                                    <tr>
+                                        <td>号码</td>
+                                        <td>赔率</td>
+                                        <td>金额</td>
+                                        <td>确认</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="order_box">
+                                    <!--<tr>
+                                        <td>特码A 8</td>
+                                        <td><span class="font_red">48.34</span></td>
+                                        <td><input type="text" class="ball_input form-control" value="10" /></td>
+                                        <td><input checked="checked" type="checkbox" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>总肖 7肖</td>
+                                        <td><span class="font_red">3.07</span></td>
+                                        <td><input type="text" class="ball_input form-control" value="10" /></td>
+                                        <td><input checked="checked" type="checkbox" /></td>
+                                    </tr>-->
+                                </tbody>
+                            </table>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered table-hover table-striped table-condensed margin0">
+                                <thead id="order_total">
+                                    <!--<tr>
+                                        <td>组数：2</td>
+                                        <td>总金额：20</td>
+                                    </tr>-->
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="lightbox_foot text-center">
+                            <button type="button" class="btn btn-primary btn-xs">&nbsp;&nbsp;确定&nbsp;&nbsp;</button>&nbsp;&nbsp;
+                            <button type="button" class="btn btn-primary btn-xs" data-dismiss="modal">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
