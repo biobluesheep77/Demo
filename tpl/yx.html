@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{TITLE}</title>
+<script type="text/jscript" src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/jscript" src="../js/bootstrap.min.js"></script>
+<script type="text/jscript" src="../js/minwt.auto_full_height.mini.js"></script>
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="../css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+<link href="../css/lottery_style.css" rel="stylesheet" type="text/css" />
+<script>
+$(document).ready(function(e) {
+	$('.ball_table tr').click(function() {
+    	if($(this).hasClass("ball_select")) {
+        	$(this).removeClass("ball_select");
+    	} else {
+        	$(this).addClass("ball_select");
+    	}
+	}); 
+	$(".add_all_number_ball").click(function(){
+			$(".number_ball tr").addClass('ball_select');
+	});
+	$(".remove_ball").click(function(){
+			$(".ball_table tr").removeClass('ball_select');
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="header" _height="none">
+	<div class="head">
+    	<div class="logo float_left">
+			<img src="../images/Lottery/logo2.png" />        	
+        </div>
+        <div class="user_info float_left font_white">
+            	Hello !! <span class="font_yellow">account</span>
+        </div>
+        <div class="hk6_result float_left">
+        	<div class="hk6_result_title float_left font_white">
+            	香港六合彩<br />
+				2017020期开奖
+            </div>
+            <div class="hk6_result_ball float_left">
+            	<a href="http://old.1680210.com/MarkSix" target="_blank">
+            		<div class="hk6_result_number float_left text-center">
+                		<img src="../images/Lottery/ball/01.png" /><br />羊
+                	</div>
+                	<div class="hk6_result_number float_left text-center">
+                		<img src="../images/Lottery/ball/02.png" /><br />马
+                	</div>
+                	<div class="hk6_result_number float_left text-center">
+                		<img src="../images/Lottery/ball/03.png" /><br />蛇
+                	</div>
+                	<div class="hk6_result_number float_left text-center">
+                		<img src="../images/Lottery/ball/04.png" /><br />龙
+                	</div>
+                	<div class="hk6_result_number float_left text-center">
+                		<img src="../images/Lottery/ball/05.png" /><br />兔
+                	</div>
+                	<div class="hk6_result_number float_left text-center">
+                		<img src="../images/Lottery/ball/06.png" /><br />虎
+                	</div>
+                	<div class="hk6_result_number float_left text-center">
+                		+
+                	</div>
+                	<div class="hk6_result_number float_left text-center">
+                		<img src="../images/Lottery/ball/07.png" /><br />牛
+                	</div>
+                </a>
+            </div>
+        </div>
+        <div class="top_link float_left font_white">
+        	<a href="bets.html">未结明细</a> | <a href="true.html">今天已结</a> | <a href="history.html">报表查询</a> | <a href="lottery.html">开奖结果</a> <br />
+			<a href="info.html">个人资讯</a> | <a href="password.html">修改密码</a> | <a href="rule.html">游戏规则</a> | 
+            <div class="btn btn-info btn-xs">
+               	<a href="../index.html">登出 <span class="glyphicon glyphicon-log-out"></span></a>
+            </div>
+        </div>
+        <div class="menu float_left">
+        	<ul>
+            	<li><a href="tmA.html">特码</a></li>
+                <li><a href="lm.html">两面</a></li>
+                <li><a href="sb.html">色波半波</a></li>
+                <li><a href="12sx.html">特肖头尾数</a></li>
+                <li><a href="hx.html">合肖</a></li>
+                <li><a href="zma.html">正码</a></li>
+                <li><a href="zmt1.html">正码特</a></li>
+                <li><a href="zm16.html">正码1-6</a></li>
+                <li><a href="wx.html">五行</a></li>
+                <li class="menu_select"><a href="yx.html">一肖总肖平特尾数</a></li>
+                <li><a href="zx.html">正肖7色波</a></li>
+                <li><a href="zxbz.html">自选不中</a></li>
+                <li><a href="dpelx2.html">连肖连尾</a></li>
+                <li><a href="mp.html">连码</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content">
+	<div class="content_left float_left" _height="auto">
+    	<div class="user_data">
+        	<div class="user_data_title">
+            	账户信息
+            </div>
+            <div class="user_data_detail">
+            	账号：ey665103<br />
+				额度：0<br />
+				未结算金额：0<br />
+            </div>
+        </div>
+        <div class="user_menu">
+        	<!--
+        	<div class="row user_row">
+            	<div class="col-md-4 padding2">
+                	<button type="button" class="btn btn-warning btn-block btn-sm padding4_0 font_size14 font_bold">个人中心</button>
+                </div>
+                <div class="col-md-4 padding2">
+                	<button type="button" class="btn btn-warning btn-block btn-sm padding4_0 font_size14 font_bold">充值</button>
+                </div>
+                <div class="col-md-4 padding2">
+                	<button type="button" class="btn btn-warning btn-block btn-sm padding4_0 font_size14 font_bold">提款</button>
+                </div>
+            </div>
+            <div class="row user_row">
+            	<a href="#"><div class="btn btn-success btn-block btn-sm padding4 font_size14 font_bold"><img src="../images/Lottery/service_icon.png" width="20" /> 在线客服</div></a>
+            </div>
+            -->
+            
+            <div class="row user_row">
+            	<div class="btn btn-primary btn-block btn-sm padding4 font_size14 font_bold">最新注单</div>
+            </div>
+        </div>
+    </div>
+    <div class="content_center float_left">
+    	<div class="plate_head font_white font_size13 font_bold">
+        	<div class="game_title float_left">
+            	香港六合彩 - 一肖总肖平特尾数
+            </div>
+            <div class="game_today float_left">
+            	今日输赢：
+                <span class="white_border font_red">
+                	0
+                </span>
+            </div>
+            <div class="margin_right20 float_right">
+            	10 秒
+            </div>
+            <div class="margin_right20 float_right">
+            	距离开奖: 
+                <span class="white_border font_green">
+                	00:00
+                </span>
+            </div>
+            <div class="margin_right10 float_right">
+            	距离封盘: 
+                <span class="white_border font_red">
+                	00:00
+                </span>
+            </div>
+            <div class="margin_right10 float_right">
+            	2017020 期
+            </div>
+        </div>
+        <div class="content_row">
+        	
+        </div>
+        <div class="content_row">
+        	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-condensed table-bordered">
+                	<thead>
+                    	<tr>
+                    		<td colspan="4" align="center" class="ball_thead">一肖</td>
+                        </tr>
+                    </thead>
+                </table>
+        	<div class="float_left ball_div width50">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+  					<tr>
+    					<td align="center" class="ball">鼠</td>
+                        <td class="ball_number">
+                        	<img src="../images/Lottery/ball/10.png" />
+                            <img src="../images/Lottery/ball/22.png" />
+							<img src="../images/Lottery/ball/34.png" />
+                            <img src="../images/Lottery/ball/46.png" />
+                        </td>
+    					<td align="center" class="ball_odds font_red text-center">--</td>
+    					<td align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td align="center" class="ball">牛</td>
+                        <td class="ball_number">
+                        	<img src="../images/Lottery/ball/09.png" />
+                            <img src="../images/Lottery/ball/21.png" />
+							<img src="../images/Lottery/ball/33.png" />
+                            <img src="../images/Lottery/ball/45.png" />
+                        </td>
+    					<td align="center" class="ball_odds font_red text-center">--</td>
+    					<td align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td align="center" class="ball">虎</td>
+                        <td class="ball_number">
+                        	<img src="../images/Lottery/ball/08.png" />
+                            <img src="../images/Lottery/ball/20.png" />
+							<img src="../images/Lottery/ball/32.png" />
+                            <img src="../images/Lottery/ball/44.png" />
+                        </td>
+    					<td align="center" class="ball_odds font_red text-center">--</td>
+    					<td align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td align="center" class="ball">兔</td>
+                        <td class="ball_number">
+                        	<img src="../images/Lottery/ball/07.png" />
+                            <img src="../images/Lottery/ball/19.png" />
+							<img src="../images/Lottery/ball/31.png" />
+                            <img src="../images/Lottery/ball/43.png" />
+                        </td>
+    					<td align="center" class="ball_odds font_red text-center">--</td>
+    					<td align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td align="center" class="ball">龙</td>
+                        <td class="ball_number">
+                        	<img src="../images/Lottery/ball/06.png" />
+                            <img src="../images/Lottery/ball/18.png" />
+							<img src="../images/Lottery/ball/30.png" />
+                            <img src="../images/Lottery/ball/42.png" />
+                        </td>
+    					<td align="center" class="ball_odds font_red text-center">--</td>
+    					<td align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td align="center" class="ball">蛇</td>
+                        <td class="ball_number">
+                        	<img src="../images/Lottery/ball/05.png" />
+                            <img src="../images/Lottery/ball/17.png" />
+							<img src="../images/Lottery/ball/29.png" />
+                            <img src="../images/Lottery/ball/41.png" />
+                        </td>
+    					<td align="center" class="ball_odds font_red text-center">--</td>
+    					<td align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+				</table>
+            </div>
+            <div class="float_left ball_div width50">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+  					<tr>
+    					<td align="center" class="ball">马</td>
+                        <td class="ball_number">
+                        	<img src="../images/Lottery/ball/04.png" />
+                            <img src="../images/Lottery/ball/16.png" />
+							<img src="../images/Lottery/ball/28.png" />
+                            <img src="../images/Lottery/ball/40.png" />
+                        </td>
+    					<td align="center" class="ball_odds font_red text-center">--</td>
+    					<td align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td align="center" class="ball">羊</td>
+                        <td class="ball_number">
+                        	<img src="../images/Lottery/ball/03.png" />
+                            <img src="../images/Lottery/ball/15.png" />
+							<img src="../images/Lottery/ball/27.png" />
+                            <img src="../images/Lottery/ball/39.png" />
+                        </td>
+    					<td align="center" class="ball_odds font_red text-center">--</td>
+    					<td align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td align="center" class="ball">猴</td>
+                        <td class="ball_number">
+                        	<img src="../images/Lottery/ball/02.png" />
+                            <img src="../images/Lottery/ball/14.png" />
+							<img src="../images/Lottery/ball/26.png" />
+                            <img src="../images/Lottery/ball/38.png" />
+                        </td>
+    					<td align="center" class="ball_odds font_red text-center">--</td>
+    					<td align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td align="center" class="ball">鸡</td>
+                        <td class="ball_number">
+                        	<img src="../images/Lottery/ball/01.png" />
+                            <img src="../images/Lottery/ball/13.png" />
+							<img src="../images/Lottery/ball/25.png" />
+                            <img src="../images/Lottery/ball/37.png" />
+                            <img src="../images/Lottery/ball/49.png" />
+                        </td>
+    					<td align="center" class="ball_odds font_red text-center">--</td>
+    					<td align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td align="center" class="ball">狗</td>
+                        <td class="ball_number">
+                        	<img src="../images/Lottery/ball/12.png" />
+                            <img src="../images/Lottery/ball/24.png" />
+							<img src="../images/Lottery/ball/36.png" />
+                            <img src="../images/Lottery/ball/48.png" />
+                        </td>
+    					<td align="center" class="ball_odds font_red text-center">--</td>
+    					<td align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td align="center" class="ball">猪</td>
+                        <td class="ball_number">
+                        	<img src="../images/Lottery/ball/11.png" />
+                            <img src="../images/Lottery/ball/23.png" />
+							<img src="../images/Lottery/ball/35.png" />
+                            <img src="../images/Lottery/ball/47.png" />
+                        </td>
+    					<td align="center" class="ball_odds font_red text-center">--</td>
+    					<td align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+				</table>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-bordered table-condensed">
+                	<thead>
+  						<tr>
+    						<td align="center" class="ball_thead">尾数</td>
+  						</tr>
+                    </thead>
+				</table>
+            <div class="float_left ball_div width20">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+  					<tr>
+    					<td width="33%" align="center" class="ball">0尾</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">5尾</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+				</table>
+            </div>
+            <div class="float_left ball_div width20">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+  					<tr>
+    					<td width="33%" align="center" class="ball">1尾</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">6尾</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+				</table>
+            </div>
+            <div class="float_left ball_div width20">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+  					<tr>
+    					<td width="33%" align="center" class="ball">2尾</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">7尾</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+				</table>
+            </div>
+            <div class="float_left ball_div width20">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+  					<tr>
+    					<td width="33%" align="center" class="ball">3尾</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">8尾</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+				</table>
+            </div>
+            <div class="float_left ball_div width20">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+  					<tr>
+    					<td width="33%" align="center" class="ball">4尾</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">9尾</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+				</table>
+            </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-bordered table-condensed">
+                	<thead>
+  						<tr>
+    						<td align="center" class="ball_thead">总肖</td>
+  						</tr>
+                    </thead>
+				</table>
+            <div class="float_left ball_div width20">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+  					<tr>
+    					<td width="33%" align="center" class="ball">2肖</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">7肖</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+				</table>
+            </div>
+            <div class="float_left ball_div width20">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+  					<tr>
+    					<td width="33%" align="center" class="ball">3肖</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">总肖单</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+				</table>
+            </div>
+            <div class="float_left ball_div width20">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+  					<tr>
+    					<td width="33%" align="center" class="ball">4肖</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">总肖双</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+				</table>
+            </div>
+            <div class="float_left ball_div width20">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+  					<tr>
+    					<td width="33%" align="center" class="ball">5肖</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball"></td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">&nbsp;</td>
+    					<td width="33%" align="center" class="ball_form">&nbsp;</td>
+  					</tr>
+				</table>
+            </div>
+            <div class="float_left ball_div width20">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+  					<tr>
+    					<td width="33%" align="center" class="ball">6肖</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">&nbsp;</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">&nbsp;</td>
+    					<td width="33%" align="center" class="ball_form">&nbsp;</td>
+  					</tr>
+				</table>
+            </div>
+        </div>
+        <div class="content_row text-center font_blue2 font_bold">
+            金额 <input type="text" class="ball_input form-control inlineblock" />&nbsp;&nbsp;
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#submit_dg">&nbsp;&nbsp;确定&nbsp;&nbsp;</button>&nbsp;
+            <button type="button" class="btn btn-primary btn-xs remove_ball">&nbsp;&nbsp;重置&nbsp;&nbsp;</button>
+        </div>
+    </div>
+    <div class="content_right float_left">
+    	<div class="content_row">
+        	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-bordered">
+            	<thead>
+  					<tr>
+    					<td colspan="3" class="fast_title text-center">快捷投注</td>
+   					</tr>
+                </thead>
+                <tbody>
+                    <tr>
+    					<td width="50%"><button type="button" class="fast_btn">野兽</button></td>
+    					<td width="50%"><button type="button" class="fast_btn">家禽</button></td>
+  					</tr>
+                    <tr>
+    					<td width="50%"><button type="button" class="fast_btn">前肖</button></td>
+    					<td width="50%"><button type="button" class="fast_btn">后肖</button></td>
+  					</tr>
+                    <tr>
+    					<td width="50%"><button type="button" class="fast_btn">天肖</button></td>
+    					<td width="50%"><button type="button" class="fast_btn">地肖</button></td>
+  					</tr>
+                </tbody>
+			</table>
+        </div>
+        <div class="content_row" style="margin-top:219px;">
+        	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-bordered">
+            	<thead>
+  					<tr>
+    					<td colspan="3" class="fast_title text-center">快捷投注</td>
+   					</tr>
+                </thead>
+                <tbody>
+                    <tr>
+    					<td width="50%"><button type="button" class="fast_btn">单</button></td>
+    					<td width="50%"><button type="button" class="fast_btn">双</button></td>
+  					</tr>
+                </tbody>
+			</table>
+        </div>
+    </div>
+<!--燈箱-->
+	<div class="modal fade" id="submit_dg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    	<div class="modal-dialog">
+        	<div class="modal-content">
+            	<div class="lightbox_head text-center">
+                	下注明细(请确认注单)
+                </div>
+                <div class="lightbox_body">
+                	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered table-hover table-striped table-condensed margin0">
+                    	<thead>
+  							<tr>
+    							<td>号码</td>
+    							<td>赔率</td>
+    							<td>金额</td>
+    							<td>确认</td>
+  							</tr>
+                        </thead>
+                        <tbody>
+  							<tr>
+    							<td>特码A 8</td>
+    							<td><span class="font_red">48.34</span></td>
+    							<td><input type="text" class="ball_input form-control" value="10" /></td>
+    							<td><input checked="checked" type="checkbox" /></td>
+  							</tr>
+                            <tr>
+    							<td>总肖 7肖</td>
+    							<td><span class="font_red">3.07</span></td>
+    							<td><input type="text" class="ball_input form-control" value="10" /></td>
+    							<td><input checked="checked" type="checkbox" /></td>
+  							</tr>
+                        </tbody>
+					</table>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered table-hover table-striped table-condensed margin0">
+                    	<thead>
+  							<tr>
+    							<td>组数：2</td>
+    							<td>总金额：20</td>
+  							</tr>
+  						</thead>
+					</table>
+                </div>
+                <div class="lightbox_foot text-center">
+                	<button type="button" class="btn btn-primary btn-xs">&nbsp;&nbsp;确定&nbsp;&nbsp;</button>&nbsp;&nbsp;
+                    <button type="button" class="btn btn-primary btn-xs" data-dismiss="modal">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--燈箱end-->
+</div>
+</body>
+</html>

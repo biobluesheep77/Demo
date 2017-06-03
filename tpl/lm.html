@@ -1,0 +1,271 @@
+    <script>
+
+        $(document).ready(function (e) {
+            //login_verification();
+	$('li').removeClass('menu_select');
+	$('#' + $.cookie('view')).addClass("menu_select");
+
+  	$('.fast_table2').css('display','none');
+
+	$('.ball_table tr').click(function() {
+    	if($(this).hasClass("ball_select")) {
+    	    $(this).removeClass("ball_select");
+    	    $(this).find('input').val('');
+    	} else {
+        	$(this).addClass("ball_select");
+    	}
+	});
+	$(".add_all_number_ball").click(function(){
+			$(".number_ball tr").addClass('ball_select');
+	});
+	$(".remove_ball").click(function(){
+	    $(".ball_table tr").removeClass('ball_select');
+	    $(".ball_table tr").find('input').val('');
+	});
+		$("#cansoul").click(function(){
+	    $(".ball_table tr").removeClass('ball_select');
+	    $(".ball_table tr").find('input').val('');
+	});
+	
+	$(".fast_table_btn1").click(function(){
+			$(".fast_table1").css('display','block');
+			$(".fast_table2").css('display','none');
+			$(".fast_table_btn1").addClass('active');
+			$(".fast_table_btn2").removeClass('active');
+	});
+	$(".fast_table_btn2").click(function(){
+			$(".fast_table2").css('display','block');
+			$(".fast_table1").css('display','none');
+			$(".fast_table_btn2").addClass('active');
+			$(".fast_table_btn1").removeClass('active');
+	});
+	})
+	</script>
+ 
+
+<div class="content">
+	
+    <div class="content_center float_left">
+    	<div class="plate_head font_white font_size13 font_bold">
+        	<div class="game_title float_left">
+            	香港六合彩 - 两面
+            </div>
+            <div class="game_today float_left">
+            	今日输赢：
+                <span class="white_border font_red">
+                	0
+                </span>
+            </div>
+            <div class="margin_right20 float_right">
+            	10 秒
+            </div>
+            <div class="margin_right20 float_right">
+            	距离开奖: 
+                <span class="white_border font_green">
+                	00:00
+                </span>
+            </div>
+            <div class="margin_right10 float_right">
+            	距离封盘: 
+                <span class="white_border font_red">
+                	00:00
+                </span>
+            </div>
+            <div class="margin_right10 float_right">
+            	2017020 期
+            </div>
+        </div>
+        <div class="content_row">
+        	
+        </div>
+        <div class="content_row">
+        	<div class="float_left ball_div width50">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+  					<tr>
+    					<td width="33%" align="center" class="ball">特大</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特大"  type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特单</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特单" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特合大</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特合大" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特合单</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特合单" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特天肖</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特天肖" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特前肖</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特单" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特家肖</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特家肖" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特大尾</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特大尾" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">总和单</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="总和单" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">总和大</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="总和大" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特大单</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特大单" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特大双</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特大双" type="text" class="ball_input form-control" /></td>
+  					</tr>
+				</table>
+            </div>
+            <div class="float_left ball_div width50">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered ball_table table-condensed number_ball">
+  					<tr>
+    					<td width="33%" align="center" class="ball">特小</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特小" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特双</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特双" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特合小</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特合小" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特合双</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特合双" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特地肖</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特地肖" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特后肖</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特后肖" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特野肖</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特野肖" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特小尾</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特小尾" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">总和双</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="总和双" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">总和小</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="总和小" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特小单</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特小单" type="text" class="ball_input form-control" /></td>
+  					</tr>
+                    <tr>
+    					<td width="33%" align="center" class="ball">特小双</td>
+    					<td width="33%" align="center" class="ball_odds font_red text-center">--</td>
+    					<td width="33%" align="center" class="ball_form"><input id="特小双" type="text" class="ball_input form-control" /></td>
+  					</tr>
+				</table>
+            </div>
+        </div>
+        <div class="content_row text-center font_blue2 font_bold">
+             金额 <input type="text" class="ball_input form-control inlineblock" id="money" name="money" />&nbsp;&nbsp;
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#submit_dg" onclick="batch_order()">&nbsp;&nbsp;确定&nbsp;&nbsp;</button>&nbsp;
+            <button type="button" class="btn btn-primary btn-xs remove_ball">&nbsp;&nbsp;重置&nbsp;&nbsp;</button>
+        </div>
+    </div>
+    <div class="content_right float_left">
+    	<div class="content_row">
+      	</div>
+    </div>
+<!--燈箱-->
+   <div class="modal fade" id="submit_dg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="lightbox_head text-center">
+                            下注明细(请确认注单)
+                        </div>
+                        <div class="lightbox_body">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered table-hover table-striped table-condensed margin0">
+                                <thead>
+                                    <tr>
+                                        <td>号码</td>
+                                        <td>赔率</td>
+                                        <td>金额</td>
+                                        <td>确认</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="order_box">
+                                    <!--<tr>
+                                        <td>特码A 8</td>
+                                        <td><span class="font_red">48.34</span></td>
+                                        <td><input type="text" class="ball_input form-control" value="10" /></td>
+                                        <td><input checked="checked" type="checkbox" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>总肖 7肖</td>
+                                        <td><span class="font_red">3.07</span></td>
+                                        <td><input type="text" class="ball_input form-control" value="10" /></td>
+                                        <td><input checked="checked" type="checkbox" /></td>
+                                    </tr>-->
+                                </tbody>
+                            </table>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered table-hover table-striped table-condensed margin0">
+                                <thead id="order_total">
+                                    <!--<tr>
+                                        <td>组数：2</td>
+                                        <td>总金额：20</td>
+                                    </tr>-->
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="lightbox_foot text-center">
+                            <button type="button" class="btn btn-primary btn-xs">&nbsp;&nbsp;确定&nbsp;&nbsp;</button>&nbsp;&nbsp;
+                            <button type="button" class="btn btn-primary btn-xs" data-dismiss="modal">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--燈箱end-->
+</div>
+
