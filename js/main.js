@@ -14,7 +14,6 @@ function RememberMe() {
 function ajax(viewname) {
     var main = $.ajax({
         url: viewname + ".html", type: "GET", success: function (data) {
-
             //login_verification();
             $('#ajax_main_block').html(data);
 			

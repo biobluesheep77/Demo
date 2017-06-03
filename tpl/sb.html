@@ -1,44 +1,45 @@
   <script>
 
-        $(document).ready(function (e) {
-            //login_verification();
-	$('li').removeClass('menu_select');
-	$('#' + $.cookie('view')).addClass("menu_select");
+      $(document).ready(function (e) {
+          //login_verification();
+          $('li').removeClass('menu_select');
+          $('#' + $.cookie('view')).addClass("menu_select");
 
-  	$('.fast_table2').css('display','none');
+          $('.fast_table2').css('display','none');
 
-	$('.ball_table tr').click(function() {
-    	if($(this).hasClass("ball_select")) {
-    	    $(this).removeClass("ball_select");
-    	    $(this).find('input').val('');
-    	} else {
-        	$(this).addClass("ball_select");
-    	}
-	});
-	$(".add_all_number_ball").click(function(){
-			$(".number_ball tr").addClass('ball_select');
-	});
-	$(".remove_ball").click(function(){
-	    $(".ball_table tr").removeClass('ball_select');
-	    $(".ball_table tr").find('input').val('');
-	});
-		$("#cansoul").click(function(){
-	    $(".ball_table tr").removeClass('ball_select');
-	    $(".ball_table tr").find('input').val('');
-	});
+          $('.ball_table tr').click(function() {
+              if($(this).hasClass("ball_select")) {
+                  $(this).removeClass("ball_select");
+                  $(this).find('input').val('');
+              } else {
+                  $(this).addClass("ball_select");
+              }
+          });
+          $(".add_all_number_ball").click(function(){
+              $(".number_ball tr").addClass('ball_select');
+          });
+          $(".remove_ball").click(function(){
+              $(".ball_table tr").removeClass('ball_select');
+              $(".ball_table tr").find('input').val('');
+          });
+          $("#cansoul").click(function(){
+              $(".ball_table tr").removeClass('ball_select');
+              $(".ball_table tr").find('input').val('');
+          });
 	
-	$(".fast_table_btn1").click(function(){
-			$(".fast_table1").css('display','block');
-			$(".fast_table2").css('display','none');
-			$(".fast_table_btn1").addClass('active');
-			$(".fast_table_btn2").removeClass('active');
-	});
-	$(".fast_table_btn2").click(function(){
-			$(".fast_table2").css('display','block');
-			$(".fast_table1").css('display','none');
-			$(".fast_table_btn2").addClass('active');
-			$(".fast_table_btn1").removeClass('active');
-	});
+          $(".fast_table_btn1").click(function(){
+              $(".fast_table1").css('display','block');
+              $(".fast_table2").css('display','none');
+              $(".fast_table_btn1").addClass('active');
+              $(".fast_table_btn2").removeClass('active');
+          });
+          $(".fast_table_btn2").click(function(){
+              $(".fast_table2").css('display','block');
+              $(".fast_table1").css('display','none');
+              $(".fast_table_btn2").addClass('active');
+              $(".fast_table_btn1").removeClass('active');
+          });
+      }
 	</script>
 
     <div class="content_center float_left">
@@ -83,23 +84,23 @@
   					<tr>
     					<td align="center" class="ball">红波</td>
                         <td class="ball_number">
-                        	<img src="../images/Lottery/ball/01.png" />
-                            <img src="../images/Lottery/ball/02.png" />
-							<img src="../images/Lottery/ball/07.png" />
-                            <img src="../images/Lottery/ball/08.png" />
-                            <img src="../images/Lottery/ball/12.png" />
-                            <img src="../images/Lottery/ball/13.png" />
-                            <img src="../images/Lottery/ball/18.png" />
-                            <img src="../images/Lottery/ball/19.png" />
-                            <img src="../images/Lottery/ball/23.png" />
-                            <img src="../images/Lottery/ball/24.png" />
-                            <img src="../images/Lottery/ball/29.png" />
-                            <img src="../images/Lottery/ball/30.png" />
-                            <img src="../images/Lottery/ball/34.png" />
-                            <img src="../images/Lottery/ball/35.png" />
-                            <img src="../images/Lottery/ball/40.png" />
-                            <img src="../images/Lottery/ball/45.png" />
-                            <img src="../images/Lottery/ball/46.png" />
+                        	<img src="../images/lottery/ball/01.png" />
+                            <img src="../images/lottery/ball/02.png" />
+							<img src="../images/lottery/ball/07.png" />
+                            <img src="../images/lottery/ball/08.png" />
+                            <img src="../images/lottery/ball/12.png" />
+                            <img src="../images/lottery/ball/13.png" />
+                            <img src="../images/lottery/ball/18.png" />
+                            <img src="../images/lottery/ball/19.png" />
+                            <img src="../images/lottery/ball/23.png" />
+                            <img src="../images/lottery/ball/24.png" />
+                            <img src="../images/lottery/ball/29.png" />
+                            <img src="../images/lottery/ball/30.png" />
+                            <img src="../images/lottery/ball/34.png" />
+                            <img src="../images/lottery/ball/35.png" />
+                            <img src="../images/lottery/ball/40.png" />
+                            <img src="../images/lottery/ball/45.png" />
+                            <img src="../images/lottery/ball/46.png" />
                         </td>
     					<td align="center" class="ball_odds font_red text-center">--</td>
     					<td align="center" class="ball_form"><input id="红波" type="text" class="ball_input form-control" /></td>
@@ -107,22 +108,22 @@
                     <tr>
     					<td align="center" class="ball">蓝波</td>
                         <td class="ball_number">
-                        	<img src="../images/Lottery/ball/03.png" />
-                            <img src="../images/Lottery/ball/04.png" />
-							<img src="../images/Lottery/ball/09.png" />
-                            <img src="../images/Lottery/ball/10.png" />
-                            <img src="../images/Lottery/ball/14.png" />
-                            <img src="../images/Lottery/ball/15.png" />
-                            <img src="../images/Lottery/ball/20.png" />
-                            <img src="../images/Lottery/ball/25.png" />
-                            <img src="../images/Lottery/ball/26.png" />
-                            <img src="../images/Lottery/ball/31.png" />
-                            <img src="../images/Lottery/ball/36.png" />
-                            <img src="../images/Lottery/ball/37.png" />
-                            <img src="../images/Lottery/ball/41.png" />
-                            <img src="../images/Lottery/ball/42.png" />
-                            <img src="../images/Lottery/ball/47.png" />
-                            <img src="../images/Lottery/ball/48.png" />
+                        	<img src="../images/lottery/ball/03.png" />
+                            <img src="../images/lottery/ball/04.png" />
+							<img src="../images/lottery/ball/09.png" />
+                            <img src="../images/lottery/ball/10.png" />
+                            <img src="../images/lottery/ball/14.png" />
+                            <img src="../images/lottery/ball/15.png" />
+                            <img src="../images/lottery/ball/20.png" />
+                            <img src="../images/lottery/ball/25.png" />
+                            <img src="../images/lottery/ball/26.png" />
+                            <img src="../images/lottery/ball/31.png" />
+                            <img src="../images/lottery/ball/36.png" />
+                            <img src="../images/lottery/ball/37.png" />
+                            <img src="../images/lottery/ball/41.png" />
+                            <img src="../images/lottery/ball/42.png" />
+                            <img src="../images/lottery/ball/47.png" />
+                            <img src="../images/lottery/ball/48.png" />
                         </td>
     					<td align="center" class="ball_odds font_red text-center">--</td>
     					<td align="center" class="ball_form"><input id="蓝波" type="text" class="ball_input form-control" /></td>
@@ -130,22 +131,22 @@
                     <tr>
     					<td align="center" class="ball">绿波</td>
                         <td class="ball_number">
-                        	<img src="../images/Lottery/ball/05.png" />
-                            <img src="../images/Lottery/ball/06.png" />
-							<img src="../images/Lottery/ball/11.png" />
-                            <img src="../images/Lottery/ball/16.png" />
-                            <img src="../images/Lottery/ball/17.png" />
-                            <img src="../images/Lottery/ball/21.png" />
-                            <img src="../images/Lottery/ball/22.png" />
-                            <img src="../images/Lottery/ball/27.png" />
-                            <img src="../images/Lottery/ball/28.png" />
-                            <img src="../images/Lottery/ball/32.png" />
-                            <img src="../images/Lottery/ball/33.png" />
-                            <img src="../images/Lottery/ball/38.png" />
-                            <img src="../images/Lottery/ball/39.png" />
-                            <img src="../images/Lottery/ball/43.png" />
-                            <img src="../images/Lottery/ball/44.png" />
-                            <img src="../images/Lottery/ball/49.png" />
+                        	<img src="../images/lottery/ball/05.png" />
+                            <img src="../images/lottery/ball/06.png" />
+							<img src="../images/lottery/ball/11.png" />
+                            <img src="../images/lottery/ball/16.png" />
+                            <img src="../images/lottery/ball/17.png" />
+                            <img src="../images/lottery/ball/21.png" />
+                            <img src="../images/lottery/ball/22.png" />
+                            <img src="../images/lottery/ball/27.png" />
+                            <img src="../images/lottery/ball/28.png" />
+                            <img src="../images/lottery/ball/32.png" />
+                            <img src="../images/lottery/ball/33.png" />
+                            <img src="../images/lottery/ball/38.png" />
+                            <img src="../images/lottery/ball/39.png" />
+                            <img src="../images/lottery/ball/43.png" />
+                            <img src="../images/lottery/ball/44.png" />
+                            <img src="../images/lottery/ball/49.png" />
                         </td>
     					<td align="center" class="ball_odds font_red text-center">--</td>
     					<td align="center" class="ball_form"><input id="绿波" type="text" class="ball_input form-control" /></td>
