@@ -1,1 +1,55 @@
-holle
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>{TITLE}</title>
+	<script type="text/jscript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/jscript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/jscript" src="js/main.js"></script>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+	<link href="css/lottery_style.css" rel="stylesheet" type="text/css" />
+
+    <script>
+        $(function () {          
+            if ($.cookie('member') != null)
+            {
+                $("#remember").attr("checked", true);
+                $('#account').val($.cookie('member'));
+            }
+        })
+    </script>
+</head>
+<body class="login_body_bg">
+	<div class="login_logo">
+		<img src="images/lottery/logo.png" />
+	</div>
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2">
+			<div class="panel panel-default noborder">
+				<div class="panel-heading d_head_bg">
+					<h4 class="panel-title font_white font_border">会员登入</h4>
+				</div>
+				<div class="panel-body text-center">
+					<div class="form-group">
+						<input type="text" id="account" name="account" class="form-control ng-pristine ng-valid ng-empty ng-touched" placeholder="帐号">
+					</div>
+					<div class="form-group">
+						<input type="password"  id="password" name="password" class="form-control ng-pristine ng-valid ng-empty ng-touched" placeholder="密码">
+					</div>
+					<div class="checkbox inlineblock">
+						<label>
+                    	<input type="checkbox" id="remember" name="remember" onclick="RememberMe()">记住我
+                    </label>
+					</div>&nbsp; | &nbsp;<a href="#">忘记密码</a>
+					<input type="submit" class="btn btn-block btn_blue font_white" value="登入" onclick="location.href='tpl/Bet.html'">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
