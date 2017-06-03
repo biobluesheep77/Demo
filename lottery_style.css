@@ -1,0 +1,409 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body {
+	font-family: Microsoft JhengHei;
+	min-width:1230px;
+}
+a:hover {
+	text-decoration:none;
+}
+
+.login_body_bg {
+	background:url(../images/lottery/bg.jpg)top center no-repeat;
+}
+.login_logo {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.font_white {
+	color:#fff;
+}
+.font_border {
+	font-weight:bold;
+}
+.font_green {
+	color:#390;
+}
+.font_red {
+	color:#F00;
+}
+.font_blue {
+	color:#039;
+}
+.font_blue2 {
+	color:#38539a;
+}
+.font_orange {
+	color:#ff8c27;
+}
+.font_yellow {
+	color:#FF0;
+}
+.font_size13 {
+	font-size:13px;
+}
+.font_size14 {
+	font-size:14px;
+}
+.font_bold {
+	font-weight:bold !important;
+}
+v_algin_top {
+	vertical-align:top;
+}
+.inlineblock {
+	display:inline-block;
+}
+.float_left {
+	float:left;
+}
+.float_right {
+	float:right;
+}
+.d_head_bg {
+	background:url(../images/lottery/dhead_bg.jpg)top left repeat-x !important;
+}
+.btn_blue {
+	background:url(../images/lottery/btn_bg.jpg)top left repeat-x !important;
+}
+.noborder {
+	border:none;
+}
+.padding2 {
+	padding:2px;
+}
+.padding3 {
+	padding:3px;
+}
+.padding4 {
+	padding:4px;
+}
+.padding4_0 {
+	padding:4px 0;
+}
+.paddingL2 {
+	padding-left:2px;
+}
+.paddingR2 {
+	padding-right:2px;
+}
+.margin0 {
+	margin:0px !important;
+}
+.margin_top5 {
+	margin-top:5px;
+}
+.margin_right10 {
+	margin-right:10px;
+}
+.margin_right20 {
+	margin-right:20px;
+}
+.width10 {
+	width:10%;
+}
+.width166 {
+	width:16.6%;
+}
+.width20 {
+	width:20%;
+}
+.width25 {
+	width:25%;
+}
+.width30 {
+	width:30%;
+}
+.width333 {
+	width:33.3%;
+}
+.width40 {
+	width:40%;
+}
+.width50 {
+	width:50%;
+}
+.width60 {
+	width:60%;
+}
+.width70 {
+	width:70%;
+}
+.width80 {
+	width:80%;
+}
+.width90 {
+	width:90%;
+}
+.width100 {
+	width:100%;
+}
+.checkbox_set {
+	height:20px;
+	vertical-align:middle;
+}
+.border_left_none {
+	border-left:none !important;
+}
+.lightbox_head {
+    padding: 10px;
+    background: #2161b3;
+    color: #Fff;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.lightbox_body {
+    padding: 10px;
+}
+.lightbox_foot {
+    padding: 10px;
+    border-top: 1px solid #eae7e7;
+}
+.header {
+	background:url(../images/lottery/head_bg.jpg)top left no-repeat;
+	height:103px;
+}
+.head {
+	padding:10px;
+	padding-bottom:0px;
+	width:1240px;
+	height:103px;
+}
+.hk6_result {
+    width: 400px;
+    padding: 10px;
+    margin-left: 20px;
+	padding-bottom:0;
+}
+.hk6_result_title {
+    line-height: 23px;
+}
+.hk6_result_ball {
+    margin-left: 10px;
+}
+.hk6_result_number {
+	margin-left:10px;
+	color:#fff;
+}
+.top_link {
+    padding: 10px;
+	padding-bottom:0px;
+}
+.top_link a {
+    color: #fff;
+    padding: 0 10px;
+}
+.user_info {
+    padding: 10px;
+    margin-left: 10px;
+    width: 150px;
+}
+.menu {
+    width: 1001px;
+    height: 34px;
+    background: url(../images/lottery/menu_bg.png)top left no-repeat;
+    margin-top: 3px;
+    margin-left: 8px;
+}
+.menu ul {
+	margin:0;
+	padding-left:20px;
+}
+.menu ul li {
+	list-style-type:none;
+	float:left;
+	padding:7px 0;
+}
+.menu ul li a {
+	color:#fff;
+	padding:7px 10px;
+}
+.menu ul li a:hover {
+	text-decoration:none;
+	color:#FC0;
+	font-weight:bold;
+}
+.menu_select a{
+	color:#FC0 !important;
+	font-weight:bold;
+}
+.content_left {
+    background: #e6e6e6;
+    padding: 5px;
+    width: 200px;
+}
+.content_row {
+	padding:5px 0;
+}
+.user_data {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #fff;
+    border: 1px solid #2161b3;
+}
+.user_data_title {
+    text-align: center;
+    padding: 10px;
+    background: #2161b3;
+    color: #fff;
+    font-weight: bold;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.user_data_detail {
+    padding: 10px;
+}
+.user_row {
+	margin:0;
+	margin-top:2px;
+}
+.content_center {
+	margin-left:5px;
+	width:829px;
+}
+.content_content {
+	width:1000px;
+}
+.plate_head {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #2161b3;
+    height: 30px;
+    padding-top: 6px;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+.game_today {
+    margin-left: 30px;
+}
+.white_border {
+    background: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 3px;
+    margin-top: 3px;
+}
+.ball {
+	background:#edf4fe;
+	height:36px;
+}
+.ball2 {
+	background:#edf4fe;
+	height:36px;
+	padding:5px 0 !important;
+	text-align:center;
+	font-weight:bold;
+}
+.ball_odds {
+	width:55px;
+	padding:5px 0 !important;
+}
+.ball_form {
+	text-align:center;
+}
+.ball_number img {
+    float: left;
+}
+input.ball_input {
+    width: 48px;
+    padding: 0 2px;
+    height: inherit;
+	-webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+.ball_table tr {
+	cursor:pointer;
+}
+.ball_table tr:hover {
+	background:#edf4fe;
+}
+.ball_div {
+}
+.ball_select td{
+	background:#FFC107 !important;
+}
+.content_right {
+    margin-left: 5px;
+    height: 100px;
+    width: 180px;
+}
+.fast_title {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b2e1ff+0,66b6fc+100;Blue+3D+%236 */
+background: #b2e1ff; /* Old browsers */
+background: -moz-linear-gradient(top, #b2e1ff 0%, #66b6fc 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #b2e1ff 0%,#66b6fc 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #b2e1ff 0%,#66b6fc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2e1ff', endColorstr='#66b6fc',GradientType=0 ); /* IE6-9 */
+	color:#006;
+	font-weight:bold;
+}
+.fast_btn {
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 );
+    border: none;
+    display: block;
+    width: 100%;
+    line-height: 18px;
+	font-weight:bold;
+}
+.fast_red {
+	color:#F00;
+}
+
+.fast_blue {
+	color:#00F;
+}
+.fast_green {
+	color:#090;
+}
+
+
+.ball_thead {
+	background:#eee !important;
+	cursor:auto;
+}
+.new_bet {
+    width: 100%;
+    height: 367px;
+    background: #fff;
+    overflow-y: scroll;
+}
+.bet_list {
+    font-size: 13px;
+}
+.bet_list {
+    font-size: 13px;
+    border: 1px solid #ccc;
+}
+.title_td {
+	background:#f5f5f5;
+}
+.list_table_thead {
+	background:#ffddba !important;
+	cursor:auto;
+}
+.list_table td {
+	padding:2px 5px !important;
+}
+.rule li {
+    list-style-type: decimal;
+    line-height: 27px;
+}
+.rule2 li {
+    list-style: none;
+    margin-left: 20px;
+	margin-bottom:20px;
+}
